@@ -1,6 +1,7 @@
 #include "obliquity.hpp"
 
 namespace conv_coord {
+
 // 定数
 static constexpr double kAs2R = 4.848136811095359935899141e-6;  // Arcseconds to radians
 

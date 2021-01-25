@@ -14,9 +14,9 @@
               * X, Y, Z: 元の赤道直交座標
 ***********************************************************/
 #include "common.hpp"
+#include "convert.hpp"
 #include "coord.hpp"
 #include "obliquity.hpp"
-#include "st_position.hpp"
 #include "time.hpp"
 
 #include <cmath>
@@ -33,8 +33,8 @@ int main(int argc, char* argv[]) {
   std::string     tm_str;     // time string
   unsigned int    s_tm;       // size of time string
   int             s_nsec;     // size of nsec string
-  ns::StPosition  pos_src;    // 直交座標（元の）
-  ns::StPosition  pos_res;    // 座標（計算結果用）
+  ns::Coord       pos_src;    // 直交座標（元の）
+  ns::Coord       pos_res;    // 座標（計算結果用）
   struct timespec jst;        // JST
   struct timespec utc;        // UTC
   struct          tm t = {};  // for work
@@ -101,7 +101,7 @@ int main(int argc, char* argv[]) {
               << "---" << std::endl;
 
     // 座標クラスのインスタンス化
-    ns::Coord o_cd(eps);
+    ns::Convert o_cd(eps);
 
     // 計算＆結果出力
     std::cout << "RECT_EQ = ["

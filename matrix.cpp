@@ -105,8 +105,8 @@ bool r_z(double psi, double(&mtx)[3][3], const double(&mtx_u)[3][3]) {
  * @param[ref]  回転行列 (double[3][3])
  * @return      回転後直交座標 (PositionRect)
  */
-StPosition rotate(StPosition pos_src, double(&mtx)[3][3]) {
-  StPosition pos_dst;
+Coord rotate(Coord pos_src, double(&mtx)[3][3]) {
+  Coord pos_dst;
 
   try {
     pos_dst.x = mtx[0][0] * pos_src.x

@@ -1,12 +1,12 @@
 gcc_options = -std=c++17 -Wall -O2 --pedantic-errors
 
-conv_coord: conv_coord.o coord.o matrix.o obliquity.o time.o common.o
+conv_coord: conv_coord.o convert.o matrix.o obliquity.o time.o common.o
 	g++92 $(gcc_options) -o $@ $^
 
 conv_coord.o : conv_coord.cpp
 	g++92 $(gcc_options) -c $<
 
-coord.o : coord.cpp
+convert.o : convert.cpp
 	g++92 $(gcc_options) -c $<
 
 matrix.o : matrix.cpp

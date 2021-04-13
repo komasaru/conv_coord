@@ -13,7 +13,6 @@
                             1秒未満(9)（小数点以下9桁（ナノ秒）まで））
               * X, Y, Z: 元の赤道直交座標
 ***********************************************************/
-#include "common.hpp"
 #include "convert.hpp"
 #include "coord.hpp"
 #include "obliquity.hpp"
@@ -22,6 +21,7 @@
 #include <cmath>
 #include <cstdlib>   // for EXIT_XXXX
 #include <ctime>
+#include <iomanip>
 #include <iostream>
 #include <sstream>
 #include <string>

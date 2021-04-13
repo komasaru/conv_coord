@@ -2,8 +2,13 @@
 #define CONV_COORD_TIME_HPP_
 
 #include <ctime>
+#include <iomanip>
+#include <string>
 
 namespace conv_coord {
+
+struct timespec jst2utc(struct timespec);
+std::string gen_time_str(struct timespec);
 
 class Time {
   struct timespec ts;  // timespec of UTC
